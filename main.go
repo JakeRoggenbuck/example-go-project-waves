@@ -27,13 +27,13 @@ func main() {
 
 	new_opt := strings.ToUpper(option)
 	if new_opt == "F" {
-		fmt.Print("Wavelength (M): ")
+		fmt.Print("Wavelength (Meters): ")
 
 		var inwave float32
 		fmt.Scanf("%f", &inwave)
 
 		f := find_frequency(inwave)
-		fmt.Println(f)
+		fmt.Println(f, "Mhz")
 	} else if new_opt == "W" {
 		fmt.Print("Frequency (MHz): ")
 
@@ -41,6 +41,6 @@ func main() {
 		fmt.Scanf("%f", &infreq)
 
 		w := find_wavelength(infreq)
-		fmt.Println(w)
+		fmt.Println(w, "Meters")
 	}
 }
